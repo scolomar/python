@@ -1,4 +1,4 @@
-pip3 install django
+#pip3 install django
 django-admin.py startproject cineteca && cd cineteca
 python manage.py startapp peliculas
 
@@ -46,7 +46,7 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py cargar_CSV
 
-python manage.py runserver 0.0.0.0:8080 2>&1 1>/dev/null&
-
 python manage.py createsuperuser
+
+python manage.py runserver 0.0.0.0:8080 &
 
