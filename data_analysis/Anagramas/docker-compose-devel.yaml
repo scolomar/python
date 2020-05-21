@@ -1,0 +1,13 @@
+#########################################################################
+#      Copyright (C) 2020        Sebastian Francisco Colomar Bauza      #
+#      SPDX-License-Identifier:  GPL-2.0-only                           #
+#########################################################################
+services:
+  python:
+    image: secobau/python:anagramas-1.1
+    restart: "no"
+    volumes:
+    - /mnt/data:/app/data:ro
+    - ./anagramas.py:/app/script:ro
+version: "2.0"
+#########################################################################
