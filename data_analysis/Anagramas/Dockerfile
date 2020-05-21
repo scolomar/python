@@ -8,7 +8,7 @@ RUN git clone https://github.com/secobau/python
 #########################################################################
 FROM python:alpine AS production
 WORKDIR /app
-COPY --from clone /app/python/data_analysis/Anagramas/anagramas.py script
+COPY --from=clone /app/python/data_analysis/Anagramas/anagramas.py script
 ENTRYPOINT ["python"]
 CMD ["script"]
 #########################################################################
