@@ -4,7 +4,7 @@
 #########################################################################
 services:
   python:
-    image: secobau/python:anagramas-1.1
+    image: secobau/python:anagramas-1.4
     restart: "no"
     volumes:
     - /mnt/data:/app/data:ro
