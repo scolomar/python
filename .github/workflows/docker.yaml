@@ -12,6 +12,7 @@ jobs:
       run: |
         set -x
         cd data_analysis/Anagramas
+        mv words.txt data
         docker build -t test --no-cache .
         docker run -v $PWD/data:/app/data test
         docker logs $( docker ps -aq ) | grep '{1:'
