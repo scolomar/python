@@ -1,0 +1,17 @@
+name: CI-docker
+on:
+  push: 
+    branches: [master]
+jobs: 
+  docker: 
+    runs-on: ubuntu-latest
+    steps:
+    -
+      uses: actions/checkout@v2
+    -
+      run: |
+        set -x
+        cd data_analysis/Anagramas
+        docker build -t test --no-cache .
+        docker run -v $PWD/data:/app/data test
+        docker logs $( docker ps -aq ) | grep '{1:'
