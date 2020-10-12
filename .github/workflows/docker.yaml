@@ -16,3 +16,4 @@ jobs:
         docker build -t test --no-cache .
         docker run -v $PWD/data:/app/data test
         docker logs $( docker ps -aq ) | grep '{1:'
+        
